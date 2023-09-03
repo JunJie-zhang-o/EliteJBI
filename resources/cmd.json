@@ -1,0 +1,115 @@
+[
+	// Method
+	// Function
+	// Variable
+	// Unit
+	// Value
+	// 
+	// deprecated
+	{
+		"label": "STARTLUA",
+		"detail": "运行脚本文件",
+		"documentation": "运行指定的脚本文件,使用该指令时须先在脚本界面设置好脚本文件",
+		"content": "",
+		"deprecated": "",
+		"params": [
+			{
+				"label": "Index={@Index}",
+				"description": "",
+				"optional": false
+			}
+		]
+	},
+	{
+		"label": "STOPLUA",
+		"detail": "停止脚本文件",
+		"document": "停止指定的脚本文件,使用该指令时须先在脚本界面设置好脚本文件",
+		"params": [
+			{
+				"label": "Index={@Index}",
+				"description": "",
+				"optional": false
+			}
+		]
+	},
+	{
+		"label": "GETLUASTATE",
+		"detail": "获取脚本状态",
+		"document": "获取脚本状态,0代表停止,1代表运行",
+		"params": [
+			{
+				"label": "{@VarB}",
+				"description": "",
+				"optional": false
+			},
+			{
+				"label": "Index={@Index}",
+				"description": "",
+				"optional": false
+			}
+		]
+	},
+	{
+		"label": "RESTARTLUA",
+		"detail": "重载脚本",
+		"document": "重新加载脚本",
+		"params": [
+			{
+				"label": "Index={@Index}",
+				"description": "",
+				"optional": false
+			}
+		]
+	},
+	{
+		"label": "STARTFORCEMODE",
+		"detail": "开启力控模式",
+		"document": "触发力控模式的指令,机器人执行该命令开启力控模式",
+		"params": [
+			{
+				"label": "Mode={$0}",
+				"values": [
+					{
+						"0": "固定模式",
+						"1": "点模式",
+						"2": "运动模式",
+						"3": "TCP模式"
+					}
+				],
+				"description": "模式",
+				"optional": false
+			},
+			{
+				"label": "{@LV | @V | ConstV=[$0,$0,$0,$0,$0,$0] }",
+				"description": "力控坐标系",
+				"optional": false,
+				"values":[
+					{
+						"0": "运动控制",
+						"1": "力跟踪",
+						"2": "固定",
+						"3": "浮动",
+						"4": "弹簧",
+						"5": "浮动&运动",
+						"6": "弹簧&运动"
+					}
+				]
+			},
+			{
+				"label": "{@LV | @V | @ConstV }",
+				"description": "力控方式",
+				"optional": false
+			},
+			{
+				"label": "{@LV | @V | @ConstV }",
+				"description": "目标力矩值",
+				"optional": false
+			},
+			{
+				"label": "{@LV | @V | @ConstV }",
+				"description": "力控速度限制",
+				"optional": false
+			}
+		]
+	}
+]
